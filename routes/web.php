@@ -28,7 +28,7 @@ Route::get('/clear', function() {
     return 'DONE';
 });
 Route::get('/track/info','TrackingController@info')->name('info');
-Route::get('/track/track-num','TrackingController@tracking')->name('track_num');
+Route::get('/track','TrackingController@tracking')->name('track_num');
 
 Auth::routes();
 
