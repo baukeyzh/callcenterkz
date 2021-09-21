@@ -40,7 +40,7 @@ class TrackingController extends Controller
             $error_msg = $values->message;
             return view('user.tracking')->with('error_msg', $error_msg);
         }
-        return view('user.info')->with('values', $values)->with('error_msg','');
+        return view('user.info')->with('values', $values);
     }
     public function tracking(Request $track_num)
     {
