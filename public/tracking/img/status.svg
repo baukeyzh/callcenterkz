@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300px" height="400px" viewBox="0 0 300 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>status</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Group" transform="translate(47.000000, 0.000000)">
+            <path d="M0.5,0.5 L0.5,199.5" id="Line" stroke="#BBBBBB"></path>
+            <path d="M1.5,0.5 L1.5,199.5" id="Line" stroke="#BBBBBB"></path>
+            <path d="M4.5,0.5 L4.5,199.5" id="Line" stroke="#BBBBBB"></path>
+            <path d="M5.5,0.5 L5.5,199.5" id="Line" stroke="#BBBBBB"></path>
+            <path d="M2.5,0.5 L2.5,199.5" id="Line" stroke="#E6E6E6"></path>
+            <path d="M3.5,0.5 L3.5,199.5" id="Line" stroke="#E6E6E6"></path>
+        </g>
+        <g id="Group" transform="translate(234.000000, 200.000000)">
+            <path d="M0.5,0.5 L0.5,199.5" id="Line" stroke="#BBBBBB"></path>
+            <path d="M1.5,0.5 L1.5,199.5" id="Line" stroke="#BBBBBB"></path>
+            <path d="M4.5,0.5 L4.5,199.5" id="Line" stroke="#BBBBBB"></path>
+            <path d="M5.5,0.5 L5.5,199.5" id="Line" stroke="#BBBBBB"></path>
+            <path d="M2.5,0.5 L2.5,199.5" id="Line" stroke="#D9D9D9"></path>
+            <path d="M3.5,0.5 L3.5,199.5" id="Line" stroke="#D9D9D9"></path>
+        </g>
+        <g id="Group" transform="translate(143.000000, 0.000000)">
+            <path d="M0.5,1 L0.5,399" id="Line" stroke="#BBBBBB"></path>
+            <path d="M1.5,1 L1.5,399" id="Line" stroke="#BBBBBB"></path>
+            <path d="M4.5,1 L4.5,399" id="Line" stroke="#BBBBBB"></path>
+            <path d="M5.5,1 L5.5,399" id="Line" stroke="#BBBBBB"></path>
+            <path d="M2.5,1 L2.5,399" id="Line" stroke="#E6E6E6"></path>
+            <path d="M3.5,1 L3.5,399" id="Line" stroke="#E6E6E6"></path>
+        </g>
+    </g>
+</svg>

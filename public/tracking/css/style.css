@@ -1,0 +1,141 @@
+.checkpoints {
+    color: #555555;
+    padding: 0;
+    margin: 0 0 10px 0;
+    width: 100%;
+    border: 1px solid #f9f9f9;
+    border-radius: 4px;
+}
+.checkpoints li:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+.checkpoints li {
+    vertical-align: top;
+    text-align: center;
+    list-style-type: none;
+    font-size: 14px;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.checkpoints li .datetime {
+    padding-left: 0;
+    color: #555555;
+    width: 100px;
+    text-align: right;
+}
+.checkpoints li .td {
+    display: table-cell;
+}
+.checkpoints li .status.down {
+    background-position: -217px center;
+}
+.checkpoints li .status {
+    width: 40px;
+    vertical-align: middle;
+    background: url('/tracking/img/status.svg') no-repeat -126px center;
+}
+.checkpoints li .td {
+    display: table-cell;
+}
+.checkpoints li .status .icon.delivered {
+    background-position: -52px 0;
+}
+.checkpoints li .status .icon {
+    display: block;
+    width: 26px;
+    height: 24px;
+    margin-left: 7px;
+    margin-right: 7px;
+    vertical-align: middle;
+    background: url('/tracking/img/status_icon.svg') 0 0;
+}
+.checkpoints li .info {
+    text-align: left;
+    color: black;
+    width: 100%;
+    padding: 7px 0;
+    background-position: 98% 50%;
+    background-repeat: no-repeat;
+    background-size: 34px;
+}
+.checkpoints li .td {
+    display: table-cell;
+}
+.checkpoints li .datetime2 {
+    position: absolute;
+    left: 15px;
+    color: #555555;
+    width: 100px;
+    text-align: right;
+    display: inline-block;
+}
+.checkpoints li .datetime2 span {
+    display: block;
+    text-align: right;
+}
+.checkpoints li .status-iconed .checkpoint-status {
+    margin-right: 60px;
+}
+.checkpoints li strong, .page-track .checkpoints li em {
+    font-weight: normal;
+    font-style: normal;
+}
+b, strong {
+    font-weight: bold;
+}
+.checkpoints li .status-iconed .text-muted {
+    margin-right: 60px;
+    display: inline-block;
+}
+.checkpoints li strong, .page-track .checkpoints li em {
+    font-weight: normal;
+    font-style: normal;
+}
+.text-muted {
+    color: #777;
+}
+
+.extra {
+    font-size: .9em;
+}
+.extra table {
+    margin-bottom: 0;
+}
+.checkpoints li .status.up {
+    background-position: -30px center;
+}
+table.table.info-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    .checkpoints li .datetime2 {
+        position: inherit;
+        color: #555555;
+        width: inherit;
+        text-align: left;
+        display: block;
+    }
+    .checkpoints li .datetime2 span {
+        display: inline;
+        text-align: left;
+    }
+    .hidden-xs {
+        display: none !important;
+    }
+}
+
+.track-group-table thead tr th{
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+#ajax_loader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 10%;
+    z-index: 1;
+}
