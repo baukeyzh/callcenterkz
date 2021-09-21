@@ -28,10 +28,7 @@ class HomeController extends Controller
         if (Auth::guard('web')->check()){
             return redirect()->route('track');
         }
-<<<<<<< HEAD
-=======
         else return redirect()->route('admin.users');
->>>>>>> 3a4d427 (first commit)
     }
 
     public function welcome()
