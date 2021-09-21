@@ -6,7 +6,7 @@
             <div class="container page-track">
                 <form method="get" action="{{route('track_num')}}">
                     <input type="text" name="track_num" style="font-size: 18px;" value="{{$values->value2[0]->track_num}}" required>
-                    <button type="submit" name="search"  style="font-size: 18px;" value="">Поиск</button>
+                    <button type="submit" name=""  style="font-size: 18px;" value="">Поиск</button>
                 </form>
                 <div class="starter-template">
                     <div class="title">
