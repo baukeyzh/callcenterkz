@@ -35,6 +35,10 @@ class TrackingController extends Controller
         $values = json_decode(Http::post('http://waybill.osulta.kz/service/read-track',[
             'num' => $num->input('num')
         ])->body());
+        if (strlen($values->message) > 0){
+            $error_msg = $values->message;
+            return view('user.tracking')->with('error_msg', $error_msg);
+        }
         return view('user.info')->with('values', $values);
     }
     public function tracking(Request $track_num)
