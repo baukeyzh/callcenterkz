@@ -26,7 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         if (Auth::guard('web')->check()){
-            return redirect()->route('track');
+            return view('user.tracking')->with('error_msg','');
         }
         else return redirect()->route('admin.users');
     }

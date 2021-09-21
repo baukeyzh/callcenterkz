@@ -6,7 +6,7 @@
                 <form action="{{route('info')}}" method="get">
                     <h3><label for="num">Введите номер HAWB:</label></h3>
                     @if(strlen($error_msg))
-                        <label style="color:red" for="num">{{$error_msg}}</label>
+                        <h1><label style="color:red" for="num">{{$error_msg}}</label></h1>
                     @endif
                     <input id="num" name="num" class="track-number-input" type="text" required>
                     <div class="block__content">

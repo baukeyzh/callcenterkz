@@ -21,8 +21,9 @@ class TrackingController extends Controller
     public function index()
     {
         if (Auth::guard('web')->check()){
-            return view('user.tracking');
+            return view('user.tracking')->with('error_msg','');
         }
+        else return view('admin.users');
     }
     /**
      * Display the specified resource.
@@ -35,11 +36,11 @@ class TrackingController extends Controller
         $values = json_decode(Http::post('http://waybill.osulta.kz/service/read-track',[
             'num' => $num->input('num')
         ])->body());
-        if (strlen($values->message) > 0){
+        if (property_exists($values, 'message') > 0){
             $error_msg = $values->message;
             return view('user.tracking')->with('error_msg', $error_msg);
         }
-        return view('user.info')->with('values', $values);
+        return view('user.info')->with('values', $values)->with('error_msg','');
     }
     public function tracking(Request $track_num)
     {
