@@ -48,7 +48,7 @@ class TrackingController extends Controller
             'track_num' => $track_num->input('track_num')
         ])->body());
         $error_msg = '';
-        if (isset($values['message'])){
+        if (isset($values->message)){
             $error_msg = $values->message;
             $values = new \stdClass();
             $values->value2[0] = new \stdClass();
