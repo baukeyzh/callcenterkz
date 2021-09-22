@@ -57,7 +57,7 @@ class UserController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         if (!($request->password == $request->password_repeat)){
-            return redirect('admin/user/create')->with('info','Пароли не совпадают');
+            return redirect('admin/user/create')->with('error','Пароли не совпадают');
         }
         $user->password = bcrypt($request->password);
         $user->save();
@@ -107,7 +107,7 @@ class UserController extends Controller
             'name' => 'required'
         ]);
         if ($request->password != $request->password_repeat){
-            return redirect('admin/user/edit/'.$id.'')->with('info','Пароли не совпадают');
+            return redirect('admin/user/edit/'.$id.'')->with('error','Пароли не совпадают');
         }
         if (strlen($request->password) != 0){
             $user->password = bcrypt($request->password);
