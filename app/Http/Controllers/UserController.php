@@ -107,8 +107,7 @@ class UserController extends Controller
             'name' => 'required'
         ]);
         if ($request->password != $request->password_repeat){
-
-            return redirect('admin/user/edit/'.$id.'');
+            return redirect('admin/user/edit/'.$id.'')->with('info','Пароли не совпадают');
         }
         if (strlen($request->password) != 0){
             $user->password = bcrypt($request->password);
