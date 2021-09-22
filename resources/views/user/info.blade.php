@@ -10,7 +10,7 @@
                 </form>
                 <div class="starter-template">
                     <div class="title">
-                        <h4 class="h2"><i class="glyphicon glyphicon-tag" style="font-size: 18px;"></i><strong style="font-size: 18px;">{{$values->value2[0]->track_num}}</strong></h4>
+                        <h4 class="h2"><i class="glyphicon glyphicon-tag" style="font-size: 18px;"></i><strong style="font-size: 18px; color: white">{{$values->value2[0]->track_num}}</strong></h4>
                     </div>
                     @if(strlen($error_msg) > 0)
                         <div class="row">
