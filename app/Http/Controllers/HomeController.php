@@ -36,5 +36,6 @@ class HomeController extends Controller
         if (Auth::guard('web')->check()){
             return redirect()->route('track');
         }
+        return redirect()->route('admin');
     }
 }
