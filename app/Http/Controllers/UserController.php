@@ -25,7 +25,7 @@ class UserController extends Controller
             return redirect()->route('home');
         }
         View::share('admin_page', 'users');
-        $users = User::paginate(1);
+        $users = User::paginate(5);
         return view('admin.users.index',['users'=> $users]);
 
     }
