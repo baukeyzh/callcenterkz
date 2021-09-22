@@ -20,9 +20,9 @@
             </div>
         </a>
         <div class="dropdown-menu dropdown-menu-right pt-0">
-            <div class="dropdown-header bg-light py-2"><strong>Account</strong></div>
+            <div class="dropdown-header bg-light py-2"><strong>Аккаунт</strong></div>
             <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                <i class="c-icon mfe-2 cil-account-logout"></i>Logout
+                <i class="c-icon mfe-2 cil-account-logout"></i>Выход
             </a>
             <form id="logout-form" action="{{ route('logout') }}" method="GET" class="d-none">
                 @csrf
