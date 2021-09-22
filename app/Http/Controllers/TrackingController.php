@@ -33,21 +33,28 @@ class TrackingController extends Controller
      */
     public function info(Request $num)
     {
-        $values = json_decode(Http::post('http://waybill.osulta.kz/service/read-track',[
+        $values = json_decode(Http::post('http://waybill.loc/service/read-track',[
             'num' => $num->input('num')
         ])->body());
-        if (property_exists($values, 'message') > 0){
+        if (property_exists($values, 'message')){
             $error_msg = $values->message;
             return view('user.tracking')->with('error_msg', $error_msg);
         }
-        return view('user.info')->with('values', $values);
+        return view('user.info')->with('values', $values)->with('error_msg', '');
     }
     public function tracking(Request $track_num)
     {
-        $values = json_decode(Http::post('http://waybill.osulta.kz/service/read-track',[
+        $values = json_decode(Http::post('http://waybill.loc/service/read-track',[
             'track_num' => $track_num->input('track_num')
         ])->body());
-        return view('user.info')->with('values', $values);
+        $error_msg = '';
+        if (property_exists($values, 'message')){
+            $error_msg = $values->message;
+            $values = new \stdClass();
+            $values->value2[0] = new \stdClass();
+            $values->value2[0]->track_num = $track_num->input('track_num');
+        }
+        return view('user.info')->with('values', $values)->with('error_msg', $error_msg);
     }
     /**
      * Show the form for creating a new resource.

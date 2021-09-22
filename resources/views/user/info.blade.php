@@ -4,7 +4,7 @@
         <div class="block__tracking-block" style="color: #000000; opacity: 1!important; z-index: 1;">
 
             <div class="container page-track">
-                <form method="get" action="{{route('track_num')}}">
+                <form method="get" action="{{route('search')}}">
                     <input type="text" name="track_num" style="font-size: 18px;" value="{{$values->value2[0]->track_num}}" required>
                     <button type="submit" name=""  style="font-size: 18px;" value="">Поиск</button>
                 </form>
@@ -12,24 +12,34 @@
                     <div class="title">
                         <h4 class="h2"><i class="glyphicon glyphicon-tag" style="font-size: 18px;"></i><strong style="font-size: 18px;">{{$values->value2[0]->track_num}}</strong></h4>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
-                            @if ($values->value1[0]->place_status_code == 'CARGOGIVE')
-                                <div class="alert alert-success text-left">
-                                    <strong>
-                                        <i class="glyphicon glyphicon-ok"></i>
-                                    </strong>&nbsp;
-                                    {{$values->value1[0]->place_status_name}}
-                                </div>
-                            @else
+                    @if(strlen($error_msg) > 0)
+                        <div class="row">
+                            <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
                                 <div class="alert alert-info text-left">
-                                    <strong><i
-                                            class="glyphicon glyphicon-info-sign"></i></strong>{{$values->value1[0]->place_status_name}}
+                                    <strong><i class="glyphicon glyphicon-info-sign"></i></strong>
+                                    {{$error_msg}}
                                 </div>
-                            @endif
+                            </div>
                         </div>
-                    </div>
-                    <div class="row"
+                    @elseif(strlen($error_msg) == 0)
+                        <div class="row">
+                            <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
+                                @if ($values->value1[0]->place_status_code == 'CARGOGIVE')
+                                    <div class="alert alert-success text-left">
+                                        <strong>
+                                            <i class="glyphicon glyphicon-ok"></i>
+                                        </strong>&nbsp;
+                                        {{$values->value1[0]->place_status_name}}
+                                    </div>
+                                @else
+                                    <div class="alert alert-info text-left">
+                                        <strong><i
+                                                class="glyphicon glyphicon-info-sign"></i></strong>{{$values->value1[0]->place_status_name}}
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="row"
                          style="background-color: 	rgba(255,255,255,1)!important;z-index: 5!important;border-radius: 3px!important;">
                         <div class="col-md-8">
                             <div id="fragment-checkpoints">
@@ -117,6 +127,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                 </div>
             </div>
         </div>
