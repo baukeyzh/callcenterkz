@@ -40,27 +40,27 @@
                             </div>
                         </div>
                         <div class="row"
-                         style="background-color: 	rgba(255,255,255,1)!important;z-index: 5!important;border-radius: 3px!important;">
-                        <div class="col-md-8">
-                            <div id="fragment-checkpoints">
-                                <ul class="checkpoints">
-                                    @foreach($values->value1 as $value)
-                                        <li style="display: table; width:100%;table-layout: fixed;">
-                                            <span class="datetime hidden-xs td"></span>
-                                            @if($value->place_status_code == 'CARGOGIVE')
-                                                <span class="td status down hidden-print">
+                             style="background-color: 	rgba(255,255,255,1)!important;z-index: 5!important;border-radius: 3px!important;">
+                            <div class="col-md-8">
+                                <div id="fragment-checkpoints">
+                                    <ul class="checkpoints">
+                                        @foreach($values->value1 as $value)
+                                            <li style="display: table; width:100%;table-layout: fixed;">
+                                                <span class="datetime hidden-xs td"></span>
+                                                @if($value->place_status_code == 'CARGOGIVE')
+                                                    <span class="td status down hidden-print">
                                                     <i class="icon delivered"></i>
                                                 </span>
-                                            @elseif($value->place_status_code == 'START')
-                                                <span class="td status up hidden-print">
+                                                @elseif($value->place_status_code == 'START')
+                                                    <span class="td status up hidden-print">
                                                     <i class="icon info-recieved"></i>
                                                 </span>
-                                            @else
-                                                <span class="td status hidden-print">
+                                                @else
+                                                    <span class="td status hidden-print">
                                                     <i class="icon"></i>
                                                 </span>
-                                            @endif
-                                            <span class="td info status-iconed">
+                                                @endif
+                                                <span class="td info status-iconed">
                                                 <time class="datetime2">
                                                     <span>{{$value->date_status}}</span>
                                                 </time>
@@ -68,65 +68,65 @@
                                                     style="display: block">{{$value->place_status_name}}</strong>
                                             <em class="text-muted">&nbsp;</em>
                                         </span>
-                                        </li>
-                                    @endforeach
-                                </ul>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="primatic hidden-xs" data-place-slug="track-sidebar"></div>
+                                <div class="extra">
+                                    <table class="table info-table">
+                                        <tbody style="font-size: 14px">
+                                        @if(strlen($values->value2[0]->track_num) > 0)
+                                            <tr>
+                                                <td>Трекинг</td>
+                                                <td>{{$values->value2[0]->track_num}}</td>
+                                            </tr>
+                                        @endif
+                                        @if(strlen($values->value2[0]->receiver_correspond_name) > 0)
+                                            <tr>
+                                                <td>Получатель</td>
+                                                <td> {{$values->value2[0]->receiver_correspond_name}}</td>
+                                            </tr>
+                                        @endif
+                                        @if(strlen($values->value2[0]->receiver_airport_name) > 0)
+                                            <tr>
+                                                <td>Аэропорт получателя</td>
+                                                <td>{{$values->value2[0]->receiver_airport_name}}</td>
+                                            </tr>
+                                        @endif
+                                        @if(strlen($values->value2[0]->receiver_airport_office_address) > 0)
+                                            <tr>
+                                                <td>Адрес офиса</td>
+                                                <td>{{$values->value2[0]->receiver_airport_office_address}}</td>
+                                            </tr>
+                                        @endif
+                                        @if(strlen($values->value2[0]->send_correspond_name) > 0)
+                                            <tr>
+                                                <td>Отправитель</td>
+                                                <td>{{$values->value2[0]->send_correspond_name}}</td>
+                                            </tr>
+                                        @endif
+                                        @if(strlen($values->value2[0]->sender_airport_name) > 0)
+                                            <tr>
+                                                <td>Аэропорт отправителя</td>
+                                                <td>{{$values->value2[0]->sender_airport_name}}</td>
+                                            </tr>
+                                        @endif
+                                        @if(strlen($values->value2[0]->sender_airport_office_address) > 0)
+                                            <tr>
+                                                <td>Адрес офиса</td>
+                                                <td>{{$values->value2[0]->sender_airport_office_address}}</td>
+                                            </tr>
+                                        @endif
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="history hidden-xs hidden-sm">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="primatic hidden-xs" data-place-slug="track-sidebar"></div>
-                            <div class="extra">
-                                <table class="table info-table">
-                                    <tbody style="font-size: 14px">
-                                    @if(strlen($values->value2[0]->track_num) > 0)
-                                        <tr>
-                                            <td>Трекинг</td>
-                                            <td>{{$values->value2[0]->track_num}}</td>
-                                        </tr>
-                                    @endif
-                                    @if(strlen($values->value2[0]->receiver_correspond_name) > 0)
-                                        <tr>
-                                            <td>Получатель</td>
-                                            <td> {{$values->value2[0]->receiver_correspond_name}}</td>
-                                        </tr>
-                                    @endif
-                                    @if(strlen($values->value2[0]->receiver_airport_name) > 0)
-                                        <tr>
-                                            <td>Аэропорт получателя</td>
-                                            <td>{{$values->value2[0]->receiver_airport_name}}</td>
-                                        </tr>
-                                    @endif
-                                    @if(strlen($values->value2[0]->receiver_airport_office_address) > 0)
-                                        <tr>
-                                            <td>Адрес офиса</td>
-                                            <td>{{$values->value2[0]->receiver_airport_office_address}}</td>
-                                        </tr>
-                                    @endif
-                                    @if(strlen($values->value2[0]->send_correspond_name) > 0)
-                                        <tr>
-                                            <td>Отправитель</td>
-                                            <td>{{$values->value2[0]->send_correspond_name}}</td>
-                                        </tr>
-                                    @endif
-                                    @if(strlen($values->value2[0]->sender_airport_name) > 0)
-                                        <tr>
-                                            <td>Аэропорт отправителя</td>
-                                            <td>{{$values->value2[0]->sender_airport_name}}</td>
-                                        </tr>
-                                    @endif
-                                    @if(strlen($values->value2[0]->sender_airport_office_address) > 0)
-                                        <tr>
-                                            <td>Адрес офиса</td>
-                                            <td>{{$values->value2[0]->sender_airport_office_address}}</td>
-                                        </tr>
-                                    @endif
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="history hidden-xs hidden-sm">
-                            </div>
-                        </div>
-                    </div>
                     @endif
                 </div>
             </div>
