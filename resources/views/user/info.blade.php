@@ -15,7 +15,7 @@
                     @if(strlen($error_msg) > 0)
                         <div class="row">
                             <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
-                                <div class="alert alert-warning text-left">
+                                <div class="alert alert-danger text-left">
                                     <strong><i class="glyphicon glyphicon glyphicon-remove"></i></strong>
                                     {{$error_msg}}
                                 </div>
