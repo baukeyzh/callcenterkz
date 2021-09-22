@@ -33,7 +33,7 @@ class TrackingController extends Controller
      */
     public function info(Request $num)
     {
-        $values = json_decode(Http::post('http://waybill.loc/service/read-track',[
+        $values = json_decode(Http::post('http://waybill.osulta.kz/service/read-track',[
             'num' => $num->input('num')
         ])->body());
         if (property_exists($values, 'message')){
@@ -44,7 +44,7 @@ class TrackingController extends Controller
     }
     public function tracking(Request $track_num)
     {
-        $values = json_decode(Http::post('http://waybill.loc/service/read-track',[
+        $values = json_decode(Http::post('http://waybill.osulta.kz/service/read-track',[
             'track_num' => $track_num->input('track_num')
         ])->body());
         $error_msg = '';
