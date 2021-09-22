@@ -28,8 +28,8 @@
                     <div class="card-body">
                         <form method="post" action="{{ url('login') }}">
                             @csrf
-                            <h1>Login</h1>
-                            <p class="text-muted">Sign In to your account</p>
+                            <h1>Вход</h1>
+                            <p class="text-muted">Введите ваши данные</p>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
@@ -51,18 +51,18 @@
                                 </div>
                                 <input type="password"
                                        class="form-control @error('password') is-invalid @enderror"
-                                       placeholder="Password" name="password">
+                                       placeholder="Пароль" name="password">
                                 @error('password')
                                 <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="row">
                                 <div class="col-4">
-                                    <button class="btn btn-primary px-4" type="submit">Login</button>
+                                    <button class="btn btn-primary px-4" type="submit">Вход</button>
                                 </div>
                                 <div class="col-8 text-right">
                                     <a class="btn btn-link px-0" href="{{ route('password.request') }}">
-                                        Forgot password?
+                                        Забыли пароль?
                                     </a>
                                 </div>
                             </div>
